@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Api for magic item review",
   "main": "index.js",
+  "repository": "https://github.com/lkennxyz/magic-item-api.git",
   "author": "Liam Kennedy <liam@lkenn.xyz>",
   "license": "MIT"
 }
