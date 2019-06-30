@@ -5,5 +5,19 @@
   "main": "index.js",
   "repository": "https://github.com/lkennxyz/magic-item-api.git",
   "author": "Liam Kennedy <liam@lkenn.xyz>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon -r dotenv/config src/index.js"
+  },
+  "devDependencies": {
+    "dotenv": "^8.0.0",
+    "eslint": "^6.0.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-graphql": "^0.8.0",
+    "graphql": "^14.4.1",
+    "helmet": "^3.18.0",
+    "mongoose": "^5.6.2"
+  }
 }
