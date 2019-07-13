@@ -17,7 +17,7 @@ const root = {
   },
   completeList: async() => {
     dbConnect();
-    const rtn = await Orig.find().exec();
+    const rtn = await Orig.find({ __v: { $ne: 0 } }).exec();
     dbClose();
     return rtn;
   },
