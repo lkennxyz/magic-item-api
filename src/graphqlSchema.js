@@ -6,6 +6,25 @@ const schema = buildSchema(`
     description: String
   }
 
+  type FullItem {
+    name: String!
+    description: String!
+    type: String!
+    rarity: Int
+    weapon_type: String
+    damage_dice_count: Int
+    damage_dice_value: Int
+    damage_type: String
+    range_normal: Int
+    range_long: Int
+    properties: [String]
+    armor_type: String
+    ac_base: Int
+    ac_dex_bonus: Boolean
+    str_min: Int
+    stealth_disadvantage: Boolean
+  }
+
   input Item {
     name: String
     description: String
@@ -19,20 +38,12 @@ const schema = buildSchema(`
     type: String
     rarity: Int
     weapon_type: String
-    damage: Damage
-    range: Range
-    properties: [String]
-  }
-
-  input Damage {
-    dice_count: Int
-    dice_value: Int
+    damage_dice_count: Int
+    damage_dice_value: Int
     damage_type: String
-  }
-
-  input Range { 
-    normal: Int
-    long: Int
+    range_normal: Int
+    range_long: Int
+    properties: String
   }
 
   input Armor {
@@ -41,20 +52,16 @@ const schema = buildSchema(`
     type: String
     rarity: Int
     armor_type: String
-    armor_class: AC
+    ac_base: Int
+    ac_dex_bonus: Boolean
     str_min: Int
     stealth_disadvantage: Boolean
   }
 
-  input AC {
-    base: Int
-    dex_bonus: Boolean
-  }
-  
   type Query {
     count: Int
     reviewList: [Orig]
-    completeList: [Orig]
+    completeList: [FullItem]
     getItem(id: String!): Orig
   }
 
