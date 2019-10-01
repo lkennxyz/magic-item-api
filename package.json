@@ -7,7 +7,8 @@
   "author": "Liam Kennedy <liam@lkenn.xyz>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon -r dotenv/config src/index.js"
+    "start": "node src/index.js",
+    "develop": "nodemon -r dotenv/config src/index.js"
   },
   "devDependencies": {
     "dotenv": "^8.0.0",
