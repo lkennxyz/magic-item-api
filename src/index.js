@@ -5,6 +5,7 @@ const { schema } = require('./graphqlSchema');
 const { root } = require('./graphqlResolve');
 
 const app = express();
+const port = process.env.PORT || 4000;
 app.use(helmet());
 
 app.use('/api', graphqlHTTP({
@@ -12,4 +13,4 @@ app.use('/api', graphqlHTTP({
   rootValue: root,
   graphiql: process.env.GRAPHIQL,
 }));
-app.listen(4000, () => console.log('listening on 4000'));
+app.listen(port, () => console.log('listening on 4000'));
