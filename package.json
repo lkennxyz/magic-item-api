@@ -15,7 +15,7 @@
     "eslint": "^6.0.1"
   },
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-graphql": "^0.8.0",
     "graphql": "^14.4.1",
     "helmet": "^3.18.0",
